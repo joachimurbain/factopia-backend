@@ -8,6 +8,8 @@ public class GameTypeConfig : IEntityTypeConfiguration<GameType>
 {
     public void Configure(EntityTypeBuilder<GameType> builder)
     {
+        builder.ToTable("GameTypes");
+
         builder.HasKey(gt => gt.Id);
 
         builder.Property(gt => gt.Title).IsRequired();

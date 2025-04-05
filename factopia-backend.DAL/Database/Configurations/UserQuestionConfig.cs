@@ -8,6 +8,8 @@ public class UserQuestionConfig : IEntityTypeConfiguration<UserQuestion>
 {
     public void Configure(EntityTypeBuilder<UserQuestion> builder)
     {
+        builder.ToTable("UserQuestions");
+
         builder.HasKey(uq => new { uq.UserId, uq.QuestionId });
 
         builder

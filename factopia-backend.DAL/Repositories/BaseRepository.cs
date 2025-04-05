@@ -1,5 +1,6 @@
 ﻿using factopia_backend.DAL.Database;
 using factopia_backend.DAL.Repositories.Interfaces;
+using factopia_backend.Domain.CustomEnums;
 using factopia_backend.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,23 +16,23 @@ public class BaseRepository<T> : IBaseRepository<T> where T : class, IEntity
         _context = context;
         _dbSet = _context.Set<T>();
     }
-    public async Task<T> AddAsync(T entity)
+    public virtual async Task<T> AddAsync(T entity)
     {
         await _dbSet.AddAsync(entity);
         await _context.SaveChangesAsync();
         return entity;
     }
 
-    public async Task<IEnumerable<T>> GetAllAsync()
+    public virtual async Task<IEnumerable<T>> GetAllAsync()
     {
         return _dbSet.ToList();
     }
 
-    public async Task<T?> GetByIdAsync(int id, bool isForDelete = false)
+    public virtual async Task<T?> GetByIdAsync(int id, TrackingBehavior tracking = TrackingBehavior.AsNoTracking)
     {
         IQueryable<T> query = _dbSet;
 
-        if (!isForDelete)
+        if (tracking == TrackingBehavior.AsNoTracking)
         {
             query = query
                     .AsNoTracking();
@@ -40,7 +41,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : class, IEntity
         return await query.FirstOrDefaultAsync(p => p.Id == id);
     }
 
-    public async Task RemoveAsync(T entity)
+    public virtual async Task RemoveAsync(T entity)
     {
         _dbSet.Remove(entity);
         await _context.SaveChangesAsync();

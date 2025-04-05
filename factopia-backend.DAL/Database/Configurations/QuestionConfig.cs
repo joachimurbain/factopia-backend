@@ -9,6 +9,8 @@ public class QuestionConfig : IEntityTypeConfiguration<Question>
 {
     public void Configure(EntityTypeBuilder<Question> builder)
     {
+        builder.ToTable("Questions");
+
         builder.HasKey(q => q.Id);
         builder.Property(q => q.Content).IsRequired();
 

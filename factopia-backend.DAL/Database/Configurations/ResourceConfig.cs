@@ -15,7 +15,7 @@ namespace factopia_backend.DAL.Database.Configurations
 
         public void Configure(EntityTypeBuilder<Resource> builder)
         {
-            builder.ToTable("Files");
+            builder.ToTable("Resources");
 
             #region Properties
             builder.Property(c => c.Id)
@@ -46,7 +46,7 @@ namespace factopia_backend.DAL.Database.Configurations
             #region Relations
 
             builder.HasOne(c => c.question)
-                .WithMany(q => q.Files)
+                .WithMany(q => q.Resources)
                 .HasForeignKey(c => c.QuestionId);
 
             #endregion

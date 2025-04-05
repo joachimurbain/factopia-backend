@@ -14,4 +14,10 @@ public class User : IEntity
     public RoleEnum Role { get; set; }
     public int Score { get; set; }
     public List<UserQuestion> UserQuestion { get; set; }
+
+    public string GeneratePseudo()
+    {
+        Random rnd = new Random();
+        return Pseudo = Pseudo + "#" + rnd.Next(1000, 9999);
+    }
 }

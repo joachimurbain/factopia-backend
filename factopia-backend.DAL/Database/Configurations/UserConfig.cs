@@ -18,6 +18,7 @@ public class UserConfig : IEntityTypeConfiguration<User>
         builder.Property(u => u.BirthYear).IsRequired();
         builder.Property(u => u.Gender).IsRequired();
 
+        builder.HasIndex(u => u.Email).IsUnique();
         builder.Property(u => u.Role).HasDefaultValueSql("1");
     }
 }

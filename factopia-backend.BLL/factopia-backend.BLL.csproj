@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="Isopoh.Cryptography.Argon2" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\factopia-backend.Domain\factopia-backend.Domain.csproj" />
     <ProjectReference Include="..\factopia-backend.DAL\factopia-backend.DAL.csproj" />
   </ItemGroup>

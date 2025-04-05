@@ -8,7 +8,7 @@ public class QuestionDTO
     public int Id { get; set; }
     public string Content { get; set; }
     public GameType GameType { get; set; }
-    public List<ResourceDTO> Files { get; set; } = [];
+    public List<ResourceDTO> Resources { get; set; } = [];
     public List<AnswerDTO> Answers { get; set; }
 
 }

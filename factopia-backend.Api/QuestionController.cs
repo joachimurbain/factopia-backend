@@ -25,5 +25,14 @@ public class QuestionController : ControllerBase
         return Ok(questions.Select(q => q.toDetailsDTO()));
     }
 
+    [HttpGet("gametype/{gameType}")]
+    public async Task<ActionResult<IEnumerable<QuestionDTO>>> GetByGameType([FromRoute] string gameType)
+    {
+        IEnumerable<Question> questions = await _questionService.GetAllAsync();
+        IEnumerable<QuestionDTO> questionsDTO = questions.Where(q => q.GameType.Title.Equals(gameType)).Select(q => q.toDetailsDTO());
+        
+        return Ok(questionsDTO);
+    }
+
 
 }

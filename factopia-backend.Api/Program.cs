@@ -26,6 +26,9 @@ builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(build
 builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
 builder.Services.AddScoped<IQuestionService, QuestionService>();
 
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+
 
 
 #region Cors

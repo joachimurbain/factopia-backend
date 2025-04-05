@@ -8,7 +8,7 @@ namespace factopia_backend.BLL.Services;
 
 public class BaseService<T> : IBaseService<T> where T : class, IEntity
 {
-    private readonly IBaseRepository<T> _repository;
+    protected readonly IBaseRepository<T> _repository;
 
     public BaseService(IBaseRepository<T> repository)
     {

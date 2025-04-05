@@ -13,7 +13,7 @@ public static class QuestionMappers
             Id = entity.Id,
             Content = entity.Content,
             Answers = entity.Answers.Select(a => a.toDetailsDTO()).ToList(),
-            Files = entity.Resources.Select(f=>f.toDetailsDTO()).ToList(),
+            Resources = entity.Resources.Select(f=>f.toDetailsDTO()).ToList(),
             GameType = entity.GameType,
 
         };

@@ -8,7 +8,7 @@ public class ResourceDTO
     public int Id { get; set; }
     public string Name { get; set; }
     public string Path { get; set; }
-    public required string FileType { get; set; }
+    public required string resourceType { get; set; }
     public bool IsCorrect { get; set; }
 
 

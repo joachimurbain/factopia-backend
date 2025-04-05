@@ -10,7 +10,7 @@ public static class ResourceMappers
         return new ResourceDTO
         {
             Id = entity.Id,
-            FileType = entity.FileType.ToString(),
+            resourceType = entity.FileType.ToString(),
             Name = entity.Name,
             Path = entity.Path,
             IsCorrect = entity.IsCorrect,

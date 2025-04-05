@@ -29,6 +29,12 @@ public class ExceptionMiddleware
                 case EntityNotFoundException:
                     context.Response.StatusCode = 404;
                     break;
+                case EmailAlreadyExistException:
+                    context.Response.StatusCode = 409;
+                    break;
+                case InvalidCredentialsException:
+                    context.Response.StatusCode = 401;
+                    break;
                 case Exception:
                     context.Response.StatusCode = 400;
                     break;

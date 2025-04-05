@@ -1,8 +1,9 @@
 ﻿using factopia_backend.Domain.CustomEnums;
+using factopia_backend.Domain.Interfaces;
 
 namespace factopia_backend.Domain.Models;
 
-public class User
+public class User : IEntity
 {
     public int Id { get; set; }
     public int BirthYear { get; set; }

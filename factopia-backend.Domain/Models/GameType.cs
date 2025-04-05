@@ -1,6 +1,8 @@
-﻿namespace factopia_backend.Domain.Models;
+﻿using factopia_backend.Domain.Interfaces;
 
-public class GameType
+namespace factopia_backend.Domain.Models;
+
+public class GameType : IEntity
 {
     public int Id { get; set; }
     public string Title { get; set; }

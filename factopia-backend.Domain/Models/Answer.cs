@@ -1,6 +1,8 @@
-﻿namespace factopia_backend.Domain.Models;
+﻿using factopia_backend.Domain.Interfaces;
 
-public class Answer
+namespace factopia_backend.Domain.Models;
+
+public class Answer : IEntity
 {
     public int Id { get; set; }
     public string Content { get; set; }

@@ -8,6 +8,8 @@ public class AnswerConfig : IEntityTypeConfiguration<Answer>
 {
     public void Configure(EntityTypeBuilder<Answer> builder)
     {
+        builder.ToTable("Answers");
+
         builder.HasKey(a => a.Id);
 
         builder.HasOne(c => c.Question)

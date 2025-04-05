@@ -13,11 +13,11 @@ public class DataContext : DbContext
     }
 
     public DbSet<Answer> Answers { get; set; }
-    public DbSet<Answer> Files { get; set; }
-    public DbSet<Answer> GamesTypes { get; set; }
-    public DbSet<Answer> Questions { get; set; }
-    public DbSet<Answer> Users { get; set; }
-    public DbSet<Answer> UsersQuestions { get; set; }
+    public DbSet<Resource> Resources { get; set; }
+    public DbSet<GameType> GamesTypes { get; set; }
+    public DbSet<Question> Questions { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<UserQuestion> UsersQuestions { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
 

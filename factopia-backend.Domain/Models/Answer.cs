@@ -1,4 +1,5 @@
-﻿using factopia_backend.Domain.Interfaces;
+﻿using System.Text.Json.Serialization;
+using factopia_backend.Domain.Interfaces;
 
 namespace factopia_backend.Domain.Models;
 

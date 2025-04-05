@@ -22,13 +22,18 @@ public class AuthRepository : BaseRepository<User>, IAuthRepository
             .FirstOrDefaultAsync();
     }
 
-    public Task<User> LoginAsync(User user)
+    public async Task<User> LoginAsync(string email)
     {
-        throw new NotImplementedException();
+        return await _dbSet
+            .Where(u => u.Email == email)
+            .FirstAsync();
     }
 
-    public Task<User> RegisterAsync(User user)
+    public async Task<User> RegisterAsync(User user)
     {
-        throw new NotImplementedException();
+        await _dbSet.AddAsync(user);
+        await _context.SaveChangesAsync();
+
+        return user;
     }
 }

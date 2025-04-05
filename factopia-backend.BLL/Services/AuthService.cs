@@ -18,14 +18,10 @@ public class AuthService : BaseService<User>, IAuthService
     // public AuthService(IAuthRepository repository) : base(repository) { }
     public async Task<User> LoginAsync(string email, string password)
     {
-        //string? pwdFromDB = await _authRepository.GetPasswordHashByEmailAsync(email);
-        //if (pwdFromDB is null) throw new InvalidCredentialsException();
+        string? pwdFromDB = await _authRepository.GetPasswordHashByEmailAsync(email);
+        if (pwdFromDB is null || !Argon2.Verify(pwdFromDB, password)) throw new InvalidCredentialsException();
 
-        //if (Argon2.Verify(pwdFromDB, password))
-        //{
-
-        //}
-        throw new NotImplementedException();
+        return await _authRepository.LoginAsync(email);
     }
 
     public async Task<User> RegisterAsync(User user)

@@ -29,8 +29,7 @@ namespace factopia_backend.Api.Tools
             {
                 new Claim(ClaimTypes.Sid, user.Id.ToString()),
                 new Claim(ClaimTypes.Role, user.Role.ToString()),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim("Score", user.Score.ToString())
+                new Claim(ClaimTypes.Email, user.Email)
             };
 
             JwtSecurityToken jwt = new JwtSecurityToken(

@@ -1,4 +1,5 @@
-﻿using System.Security.Authentication;
+﻿using factopia_backend.BLL.CustomExceptions;
+using System.Security.Authentication;
 
 namespace factopia_backend.Api.Middlewares;
 
@@ -25,6 +26,9 @@ public class ExceptionMiddleware
             int statusCode = 0;
             switch (ex)
             {
+                case EntityNotFoundException:
+                    context.Response.StatusCode = 404;
+                    break;
                 case Exception:
                     context.Response.StatusCode = 400;
                     break;

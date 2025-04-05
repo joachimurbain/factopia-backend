@@ -5,6 +5,10 @@
     <ProjectReference Include="..\factopia-backend.DAL\factopia-backend.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CustomExceptions\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>factopia_backend.BLL</RootNamespace>

@@ -1,3 +1,4 @@
+using factopia_backend.Api.Middlewares;
 using factopia_backend.BLL.Services;
 using factopia_backend.BLL.Services.Interfaces;
 using factopia_backend.DAL.Database;
@@ -15,7 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Jo")));
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Pierre")));
 
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 builder.Services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
@@ -65,6 +66,7 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 app.UseCors("Front");
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.MapControllers();
 

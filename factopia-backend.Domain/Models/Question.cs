@@ -8,4 +8,5 @@ public class Question
     public int GameTypeId { get; set; }
     public GameType GameType { get; set; }
     public List<File> Files { get; set; } = [];
+    public List<Answer> Answers { get; set; }
 }

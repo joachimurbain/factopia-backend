@@ -1,4 +1,5 @@
-﻿using factopia_backend.BLL.Services.Interfaces;
+﻿using factopia_backend.BLL.CustomExceptions;
+using factopia_backend.BLL.Services.Interfaces;
 using factopia_backend.DAL.Repositories.Interfaces;
 using factopia_backend.Domain.CustomEnums;
 using factopia_backend.Domain.Interfaces;
@@ -27,7 +28,7 @@ public class BaseService<T> : IBaseService<T> where T : class, IEntity
     public async Task<T?> GetByIdAsync(int id, TrackingBehavior tracking = TrackingBehavior.AsNoTracking)
     {
         T? entity = await _repository.GetByIdAsync(id);
-        if (entity is null) throw new Exception("Entity not found.");
+        if (entity is null) throw new EntityNotFoundException();
 
         return entity;
     }
@@ -35,7 +36,7 @@ public class BaseService<T> : IBaseService<T> where T : class, IEntity
     public async Task RemoveAsync(int id)
     {
         T? entity = await _repository.GetByIdAsync(id);
-        if (entity is null) throw new Exception("Entity not found.");
+        if (entity is null) throw new EntityNotFoundException();
 
         await _repository.RemoveAsync(entity);
     }

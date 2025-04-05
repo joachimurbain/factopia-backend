@@ -1,18 +1,19 @@
 ﻿
 using System.Diagnostics;
 using factopia_backend.Domain.CustomEnums;
+using factopia_backend.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Models = factopia_backend.Domain.Models;
+
 
 
 namespace factopia_backend.DAL.Database.Configurations
 {
-    class FileConfig : IEntityTypeConfiguration<Models.File>
+    class ResourceConfig : IEntityTypeConfiguration<Resource>
     {
 
-        public void Configure(EntityTypeBuilder<Models.File> builder)
+        public void Configure(EntityTypeBuilder<Resource> builder)
         {
             builder.ToTable("Files");
 

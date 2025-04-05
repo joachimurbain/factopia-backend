@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using factopia_backend.DAL.Database;
 
@@ -10,9 +11,11 @@ using factopia_backend.DAL.Database;
 namespace factopia_backend.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250405163445_GameType_Seed")]
+    partial class GameType_Seed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,6 +47,42 @@ namespace factopia_backend.DAL.Migrations
                     b.HasIndex("QuestionId");
 
                     b.ToTable("Answer");
+                });
+
+            modelBuilder.Entity("factopia_backend.Domain.Models.File", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FileType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("QuestionId");
+
+                    b.ToTable("Files", (string)null);
                 });
 
             modelBuilder.Entity("factopia_backend.Domain.Models.GameType", b =>
@@ -107,61 +146,6 @@ namespace factopia_backend.DAL.Migrations
                     b.HasIndex("GameTypeId");
 
                     b.ToTable("Question");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Content = "Regarde et decide si c'est vrai",
-                            GameTypeId = 1
-                        });
-                });
-
-            modelBuilder.Entity("factopia_backend.Domain.Models.Resource", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("Id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("FileType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsCorrect")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Path")
-                        .IsRequired()
-                        .HasMaxLength(512)
-                        .HasColumnType("nvarchar(512)");
-
-                    b.Property<int>("QuestionId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("QuestionId");
-
-                    b.ToTable("Files", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/A_1.mp4",
-                            QuestionId = 1
-                        });
                 });
 
             modelBuilder.Entity("factopia_backend.Domain.Models.User", b =>
@@ -229,6 +213,17 @@ namespace factopia_backend.DAL.Migrations
                     b.Navigation("Question");
                 });
 
+            modelBuilder.Entity("factopia_backend.Domain.Models.File", b =>
+                {
+                    b.HasOne("factopia_backend.Domain.Models.Question", "question")
+                        .WithMany("Files")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("question");
+                });
+
             modelBuilder.Entity("factopia_backend.Domain.Models.Question", b =>
                 {
                     b.HasOne("factopia_backend.Domain.Models.GameType", "GameType")
@@ -238,17 +233,6 @@ namespace factopia_backend.DAL.Migrations
                         .IsRequired();
 
                     b.Navigation("GameType");
-                });
-
-            modelBuilder.Entity("factopia_backend.Domain.Models.Resource", b =>
-                {
-                    b.HasOne("factopia_backend.Domain.Models.Question", "question")
-                        .WithMany("Files")
-                        .HasForeignKey("QuestionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("question");
                 });
 
             modelBuilder.Entity("factopia_backend.Domain.Models.UserQuestion", b =>

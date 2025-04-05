@@ -1,0 +1,6 @@
+@factopia_backend.Api_HostAddress = http://localhost:5109
+
+GET {{factopia_backend.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

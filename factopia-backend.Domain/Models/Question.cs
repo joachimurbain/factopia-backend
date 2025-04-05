@@ -7,4 +7,5 @@ public class Question
     public List<UserQuestion> UserQuestion { get; set; }
     public int GameTypeId { get; set; }
     public GameType GameType { get; set; }
+    public List<File> Files { get; set; } = [];
 }

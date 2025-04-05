@@ -22,9 +22,9 @@ public class BaseRepository<T> : IBaseRepository<T> where T : class, IEntity
         return entity;
     }
 
-    public Task<IEnumerable<T>> GetAllAsync()
+    public async Task<IEnumerable<T>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        return _dbSet.ToList();
     }
 
     public async Task<T?> GetByIdAsync(int id, bool isForDelete = false)
@@ -40,8 +40,9 @@ public class BaseRepository<T> : IBaseRepository<T> where T : class, IEntity
         return await query.FirstOrDefaultAsync(p => p.Id == id);
     }
 
-    public Task<T> RemoveAsync(T entity)
+    public async Task RemoveAsync(T entity)
     {
-        throw new NotImplementedException();
+        _dbSet.Remove(entity);
+        await _context.SaveChangesAsync();
     }
 }

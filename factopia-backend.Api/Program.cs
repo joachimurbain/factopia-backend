@@ -1,4 +1,8 @@
+using factopia_backend.BLL.Services;
+using factopia_backend.BLL.Services.Interfaces;
 using factopia_backend.DAL.Database;
+using factopia_backend.DAL.Repositories;
+using factopia_backend.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 
@@ -12,6 +16,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Jo")));
+
+builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+builder.Services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
 
 #region Cors
 builder.Services.AddCors(options =>

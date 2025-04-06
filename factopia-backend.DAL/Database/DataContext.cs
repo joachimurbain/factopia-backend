@@ -82,7 +82,7 @@ public class DataContext : DbContext
         );
 
         modelBuilder.Entity<Answer>().HasData(
-            new Answer { Id = 1, QuestionId = 2, Content = "Vrai", IsCorrect = true },
+
             new Answer { Id = 2, QuestionId = 2, Content = "Faux", IsCorrect = false },
             new Answer { Id = 3, QuestionId = 3, Content = "Vrai", IsCorrect = false },
             new Answer { Id = 4, QuestionId = 3, Content = "Faux", IsCorrect = true },
@@ -98,6 +98,8 @@ public class DataContext : DbContext
             new Answer { Id = 14, QuestionId = 8, Content = "Faux", IsCorrect = false },
             new Answer { Id = 15, QuestionId = 9, Content = "Vrai", IsCorrect = true },
             new Answer { Id = 16, QuestionId = 9, Content = "Faux", IsCorrect = false },
+
+
             new Answer { Id = 17, QuestionId = 10, Content = "Bien vu, nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer cette fausse vidéo. C'est discret, mais si on regarde bien, le mouvement de la patte n'est pas naturel et, quand on zoome, le grain de l'image est typique de ce que Sora est capable de produire. ", IsCorrect = true },
             new Answer { Id = 18, QuestionId = 10, Content = "Désolé, vous vous êtes trompé, nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer cette fausse vidéo. C'est discret, mais si on regarde bien, le mouvement de la patte n'est pas naturel et, quand on zoome, le grain de l'image est typique de ce que Sora est capable de produire. ", IsCorrect = false },
             new Answer { Id = 19, QuestionId = 11, Content = "Bien vu, il s'agit bien d'une vraie vidéo proposée par Getty Images,", IsCorrect = true },

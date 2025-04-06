@@ -157,6 +157,202 @@ namespace factopia_backend.DAL.Migrations
                             Content = "Faux",
                             IsCorrect = false,
                             QuestionId = 9
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Content = "Bien vu, nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer cette fausse vidéo. C'est discret, mais si on regarde bien, le mouvement de la patte n'est pas naturel et, quand on zoome, le grain de l'image est typique de ce que Sora est capable de produire. ",
+                            IsCorrect = true,
+                            QuestionId = 10
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Content = "Désolé, vous vous êtes trompé, nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer cette fausse vidéo. C'est discret, mais si on regarde bien, le mouvement de la patte n'est pas naturel et, quand on zoome, le grain de l'image est typique de ce que Sora est capable de produire. ",
+                            IsCorrect = false,
+                            QuestionId = 10
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Content = "Bien vu, il s'agit bien d'une vraie vidéo proposée par Getty Images,",
+                            IsCorrect = true,
+                            QuestionId = 11
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Content = "Désolé, vous vous êtes trompé, il s'agit en fait un clip vidéo proposé par Getty Images,",
+                            IsCorrect = false,
+                            QuestionId = 11
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Content = "Bien vu, nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer cette fausse vidéo. Un détail permettait de déceler le fake : le bras d'une personne assise à droite de l'image a esquissé un mouvement pas très naturel. Certaines pailles dans les verres sur le plateau bougent bizarrement aussi. ",
+                            IsCorrect = true,
+                            QuestionId = 12
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Content = "Désolé, vous vous êtes trompé, nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer cette fausse vidéo. Certains détails auraient pu vous mettre sur la piste  : le bras d'une personne assise à droite de l'image a esquissé un mouvement pas très naturel. Certaines pailles dans les verres sur le plateau bougent bizarrement aussi. ",
+                            IsCorrect = false,
+                            QuestionId = 12
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Content = "Bien vu, il s'agit bien d'une vraie vidéo proposée par Getty Images,",
+                            IsCorrect = true,
+                            QuestionId = 13
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Content = "Désolé, vous vous êtes trompé, il s'agit en fait un clip vidéo proposé par Getty Images,",
+                            IsCorrect = false,
+                            QuestionId = 13
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Content = "Bravo, décidément, on ne vous la fait pas à vous!. Il faut dire que c'était facile avec le téléphone gigantesque en arrière-plan et les mains qui semblent à peine toucher le clavier. Nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer cette vidéo,",
+                            IsCorrect = true,
+                            QuestionId = 14
+                        },
+                        new
+                        {
+                            Id = 26,
+                            Content = "Désolé, vous vous êtes trompé, vous auriez pu trouver, si vous aviez remarqué le téléphone gigantesque en arrière-plan et les mains qui semblent à peine toucher le clavier, vous auriez pu trouver. Nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer la première vidéo.",
+                            IsCorrect = false,
+                            QuestionId = 14
+                        },
+                        new
+                        {
+                            Id = 27,
+                            Content = "Bien vu, il s'agit bien d'une vraie vidéo proposée par Getty Images,",
+                            IsCorrect = true,
+                            QuestionId = 15
+                        },
+                        new
+                        {
+                            Id = 28,
+                            Content = "Désolé, vous vous êtes trompé, il s'agit en fait un clip vidéo proposé par Getty Images,",
+                            IsCorrect = false,
+                            QuestionId = 15
+                        },
+                        new
+                        {
+                            Id = 29,
+                            Content = "Bien vu ! Vous avez peut-être été frappé par l'aspect trop lisse des bâtiments et par le drapeau américain au premier plan qui bouge avec un mouvement pas très naturel. Encore une fois, c'est l'oeuvre de Sora, tandis que l'autre vidéo vient de Getty Images.",
+                            IsCorrect = true,
+                            QuestionId = 16
+                        },
+                        new
+                        {
+                            Id = 30,
+                            Content = "Désolé, vous vous êtes trompé, vous auriez pu deviner, si vous aviez remarqué  l'aspect trop lisse des bâtiments et par le drapeau américain au premier plan qui bouge avec un mouvement pas très naturel. Encore une fois, c'est l'oeuvre de Sora,",
+                            IsCorrect = false,
+                            QuestionId = 16
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Content = "Bien vu, il s'agit bien d'une vraie vidéo proposée par Getty Images,",
+                            IsCorrect = true,
+                            QuestionId = 17
+                        },
+                        new
+                        {
+                            Id = 32,
+                            Content = "Désolé, vous vous êtes trompé, il s'agit en fait un clip vidéo proposé par Getty Images,",
+                            IsCorrect = false,
+                            QuestionId = 17
+                        },
+                        new
+                        {
+                            Id = 33,
+                            Content = "Bien vu !  Ce jeune homme est le résultat de l'imagination de l'IA",
+                            IsCorrect = true,
+                            QuestionId = 18
+                        },
+                        new
+                        {
+                            Id = 34,
+                            Content = "Désolé, vous vous êtes trompé ! Ce jeune homme est le résultat de l'imagination de l'IA",
+                            IsCorrect = false,
+                            QuestionId = 18
+                        },
+                        new
+                        {
+                            Id = 35,
+                            Content = "Bien vu, il s'agit bien d'une vidéo probablement tournée sur un trampoline, qui vient de Getty Images.",
+                            IsCorrect = true,
+                            QuestionId = 19
+                        },
+                        new
+                        {
+                            Id = 36,
+                            Content = "Désolé, il s'agit en faite d'une vidéo de Getty Images probablement tournée sur un trampoline.",
+                            IsCorrect = false,
+                            QuestionId = 19
+                        },
+                        new
+                        {
+                            Id = 37,
+                            Content = "Vrai",
+                            IsCorrect = true,
+                            QuestionId = 20
+                        },
+                        new
+                        {
+                            Id = 38,
+                            Content = "Faux",
+                            IsCorrect = false,
+                            QuestionId = 20
+                        },
+                        new
+                        {
+                            Id = 39,
+                            Content = "Vrai",
+                            IsCorrect = true,
+                            QuestionId = 21
+                        },
+                        new
+                        {
+                            Id = 40,
+                            Content = "Faux",
+                            IsCorrect = false,
+                            QuestionId = 21
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Content = "Vrai",
+                            IsCorrect = true,
+                            QuestionId = 22
+                        },
+                        new
+                        {
+                            Id = 42,
+                            Content = "Faux",
+                            IsCorrect = false,
+                            QuestionId = 22
+                        },
+                        new
+                        {
+                            Id = 43,
+                            Content = "Vrai",
+                            IsCorrect = true,
+                            QuestionId = 23
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Content = "Faux",
+                            IsCorrect = false,
+                            QuestionId = 23
                         });
                 });
 
@@ -276,6 +472,90 @@ namespace factopia_backend.DAL.Migrations
                             Id = 9,
                             Content = "Le cœur humain est capable de continuer à battre après la mort.",
                             GameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Content = "Cette vidéo est-elle fake ou réelle ?",
+                            GameTypeId = 1
                         });
                 });
 
@@ -318,92 +598,128 @@ namespace factopia_backend.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/1_A.mp4",
-                            QuestionId = 1
+                            Path = "/videos/1_Fake.mp4",
+                            QuestionId = 10
                         },
                         new
                         {
                             Id = 2,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/1_B.mp4",
-                            QuestionId = 1
+                            Path = "/videos/1_Real.mp4",
+                            QuestionId = 11
                         },
                         new
                         {
                             Id = 3,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/2_A.mp4",
-                            QuestionId = 1
+                            Path = "/videos/2_Fake.mp4",
+                            QuestionId = 12
                         },
                         new
                         {
                             Id = 4,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/2_B.mp4",
-                            QuestionId = 1
+                            Path = "/videos/2_Real.mp4",
+                            QuestionId = 13
                         },
                         new
                         {
                             Id = 5,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/3_A.mp4",
-                            QuestionId = 1
+                            Path = "/videos/3_Fake.mp4",
+                            QuestionId = 14
                         },
                         new
                         {
                             Id = 6,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/3_B.mp4",
-                            QuestionId = 1
+                            Path = "/videos/3_Real.mp4",
+                            QuestionId = 15
                         },
                         new
                         {
                             Id = 7,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/4_A.mp4",
-                            QuestionId = 1
+                            Path = "/videos/4_Fake.mp4",
+                            QuestionId = 16
                         },
                         new
                         {
                             Id = 8,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/4_B.mp4",
-                            QuestionId = 1
+                            Path = "/videos/4_Real.mp4",
+                            QuestionId = 17
                         },
                         new
                         {
                             Id = 9,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/5_A.mp4",
-                            QuestionId = 1
+                            Path = "/videos/5_Fake.mp4",
+                            QuestionId = 18
                         },
                         new
                         {
                             Id = 10,
-                            FileType = "Image",
+                            FileType = "Video",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/5_B.mp4",
-                            QuestionId = 1
+                            Path = "/videos/5_Real.mp4",
+                            QuestionId = 19
+                        },
+                        new
+                        {
+                            Id = 11,
+                            FileType = "Video",
+                            IsCorrect = false,
+                            Name = "A_1.mp4",
+                            Path = "/videos/Luma AI dropped a Sora competitor – Dream Machine - text-to-video generator that's open to ALL! #ai.mp4",
+                            QuestionId = 20
+                        },
+                        new
+                        {
+                            Id = 12,
+                            FileType = "Video",
+                            IsCorrect = false,
+                            Name = "A_1.mp4",
+                            Path = "/videos/This is not Morgan Freeman  -  A Deepfake Singularity.mp4",
+                            QuestionId = 21
+                        },
+                        new
+                        {
+                            Id = 13,
+                            FileType = "Video",
+                            IsCorrect = false,
+                            Name = "A_1.mp4",
+                            Path = "/videos/Trump Gets a Kim Jong Un Haircut – Putin Can’t Stop Laughing! 🤣💈.mp4",
+                            QuestionId = 22
+                        },
+                        new
+                        {
+                            Id = 14,
+                            FileType = "Video",
+                            IsCorrect = false,
+                            Name = "A_1.mp4",
+                            Path = "/videos/Viral AI Video Trump & Harris Romance Ahead of U.S. Election.mp4",
+                            QuestionId = 23
                         });
                 });
 

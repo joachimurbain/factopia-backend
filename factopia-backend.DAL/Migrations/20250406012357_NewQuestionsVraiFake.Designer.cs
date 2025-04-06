@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using factopia_backend.DAL.Database;
 
@@ -10,9 +11,11 @@ using factopia_backend.DAL.Database;
 namespace factopia_backend.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250406012357_NewQuestionsVraiFake")]
+    partial class NewQuestionsVraiFake
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -321,88 +324,7 @@ namespace factopia_backend.DAL.Migrations
                             FileType = "Image",
                             IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/1_A.mp4",
-                            QuestionId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/1_B.mp4",
-                            QuestionId = 1
-                        },
-                        new
-                        {
-                            Id = 3,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/2_A.mp4",
-                            QuestionId = 1
-                        },
-                        new
-                        {
-                            Id = 4,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/2_B.mp4",
-                            QuestionId = 1
-                        },
-                        new
-                        {
-                            Id = 5,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/3_A.mp4",
-                            QuestionId = 1
-                        },
-                        new
-                        {
-                            Id = 6,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/3_B.mp4",
-                            QuestionId = 1
-                        },
-                        new
-                        {
-                            Id = 7,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/4_A.mp4",
-                            QuestionId = 1
-                        },
-                        new
-                        {
-                            Id = 8,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/4_B.mp4",
-                            QuestionId = 1
-                        },
-                        new
-                        {
-                            Id = 9,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/5_A.mp4",
-                            QuestionId = 1
-                        },
-                        new
-                        {
-                            Id = 10,
-                            FileType = "Image",
-                            IsCorrect = false,
-                            Name = "A_1.mp4",
-                            Path = "/videos/5_B.mp4",
+                            Path = "/videos/A_1.mp4",
                             QuestionId = 1
                         });
                 });

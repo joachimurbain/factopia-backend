@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using factopia_backend.DAL.Database;
 
@@ -10,9 +11,11 @@ using factopia_backend.DAL.Database;
 namespace factopia_backend.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250406094321_missing seedling")]
+    partial class missingseedling
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,6 +49,13 @@ namespace factopia_backend.DAL.Migrations
                     b.ToTable("Answers", (string)null);
 
                     b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Content = "Vrai",
+                            IsCorrect = true,
+                            QuestionId = 2
+                        },
                         new
                         {
                             Id = 2,
@@ -150,6 +160,20 @@ namespace factopia_backend.DAL.Migrations
                             Content = "Faux",
                             IsCorrect = false,
                             QuestionId = 9
+                        },
+                        new
+                        {
+                            Id = 45,
+                            Content = "Bien vu, nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer cette fausse vidéo. C'est discret, mais si on regarde bien, le mouvement de la patte n'est pas naturel et, quand on zoome, le grain de l'image est typique de ce que Sora est capable de produire. ",
+                            IsCorrect = true,
+                            QuestionId = 1
+                        },
+                        new
+                        {
+                            Id = 46,
+                            Content = "Désolé, vous vous êtes trompé, nous avons utilisé Sora, l'outil de création de vidéos mis au point par Open AI pour générer cette fausse vidéo. C'est discret, mais si on regarde bien, le mouvement de la patte n'est pas naturel et, quand on zoome, le grain de l'image est typique de ce que Sora est capable de produire. ",
+                            IsCorrect = false,
+                            QuestionId = 1
                         },
                         new
                         {
@@ -601,7 +625,7 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 2,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
                             Path = "/videos/1_Real.mp4",
                             QuestionId = 11
@@ -619,7 +643,7 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 4,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
                             Path = "/videos/2_Real.mp4",
                             QuestionId = 13
@@ -637,9 +661,9 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 6,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/3_Real.mov",
+                            Path = "/videos/3_Real.mp4",
                             QuestionId = 15
                         },
                         new
@@ -655,7 +679,7 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 8,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
                             Path = "/videos/4_Real.mp4",
                             QuestionId = 17
@@ -673,7 +697,7 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 10,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
                             Path = "/videos/5_Real.mp4",
                             QuestionId = 19

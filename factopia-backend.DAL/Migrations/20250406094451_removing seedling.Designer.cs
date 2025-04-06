@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using factopia_backend.DAL.Database;
 
@@ -10,9 +11,11 @@ using factopia_backend.DAL.Database;
 namespace factopia_backend.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250406094451_removing seedling")]
+    partial class removingseedling
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -601,7 +604,7 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 2,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
                             Path = "/videos/1_Real.mp4",
                             QuestionId = 11
@@ -619,7 +622,7 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 4,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
                             Path = "/videos/2_Real.mp4",
                             QuestionId = 13
@@ -637,9 +640,9 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 6,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
-                            Path = "/videos/3_Real.mov",
+                            Path = "/videos/3_Real.mp4",
                             QuestionId = 15
                         },
                         new
@@ -655,7 +658,7 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 8,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
                             Path = "/videos/4_Real.mp4",
                             QuestionId = 17
@@ -673,7 +676,7 @@ namespace factopia_backend.DAL.Migrations
                         {
                             Id = 10,
                             FileType = "Video",
-                            IsCorrect = true,
+                            IsCorrect = false,
                             Name = "A_1.mp4",
                             Path = "/videos/5_Real.mp4",
                             QuestionId = 19

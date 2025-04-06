@@ -75,10 +75,10 @@ public class DataContext : DbContext
              new Resource { Id = 8, QuestionId = 17, Path = "/videos/4_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
              new Resource { Id = 9, QuestionId = 18, Path = "/videos/5_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
              new Resource { Id = 10, QuestionId = 19, Path = "/videos/5_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 11, QuestionId = 20, Path = "/videos/Luma AI dropped a Sora competitor – Dream Machine - text-to-video generator that's open to ALL! #ai.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 12, QuestionId = 21, Path = "/videos/This is not Morgan Freeman  -  A Deepfake Singularity.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 13, QuestionId = 22, Path = "/videos/Trump Gets a Kim Jong Un Haircut – Putin Can’t Stop Laughing! 🤣💈.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 14, QuestionId = 23, Path = "/videos/Viral AI Video Trump & Harris Romance Ahead of U.S. Election.mp4", FileType = FileType.Video, Name = "A_1.mp4" }
+             new Resource { Id = 11, QuestionId = 20, Path = "/videos/LumaAIdroppedaSoracompetitor–Dream Machine-text-to-videogeneratorthatsopentoALLai.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
+             new Resource { Id = 12, QuestionId = 21, Path = "/videos/ThisisnotMorganFreeman-ADeepfakeSingularity.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
+             new Resource { Id = 13, QuestionId = 22, Path = "/videos/TrumpGetsaKimJongUnHaircut–PutinCantStopLaughing.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
+             new Resource { Id = 14, QuestionId = 23, Path = "/videos/ViralAIVideoTrumpHarrisRomanceAheadofUSElection.mp4", FileType = FileType.Video, Name = "A_1.mp4" }
         );
 
         modelBuilder.Entity<Answer>().HasData(

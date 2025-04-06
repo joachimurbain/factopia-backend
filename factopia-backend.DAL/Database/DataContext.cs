@@ -42,7 +42,7 @@ public class DataContext : DbContext
              new Question { Id = 1, GameTypeId = 1, Content = "Regarde et decide si c'est vrai" },
              new Question { Id = 2, GameTypeId = 3, Content = "Les chats ont cinq orteils à chaque patte avant." },
              new Question { Id = 3, GameTypeId = 3, Content = "Le sucre rend les enfants hyperactifs." },
-             new Question { Id = 4, GameTypeId = 3, Content = "Le lait aide à réparer les os cassés." }
+             new Question { Id = 4, GameTypeId = 3, Content = "Le lait aide à réparer les os cassés." },
              new Question { Id = 5, GameTypeId = 3, Content = "Les éléphants sont les seuls animaux qui ne peuvent pas sauter." },
              new Question { Id = 6, GameTypeId = 3, Content = "L'homme a plus de dents que la femme." },
              new Question { Id = 7, GameTypeId = 3, Content = "Le miel ne se périme jamais." },

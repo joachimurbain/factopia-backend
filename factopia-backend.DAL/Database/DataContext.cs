@@ -65,20 +65,20 @@ public class DataContext : DbContext
         );
 
         modelBuilder.Entity<Resource>().HasData(
-             new Resource { Id = 1, QuestionId = 10, Path = "/videos/1_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 2, QuestionId = 11, Path = "/videos/1_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 3, QuestionId = 12, Path = "/videos/2_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 4, QuestionId = 13, Path = "/videos/2_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 5, QuestionId = 14, Path = "/videos/3_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 6, QuestionId = 15, Path = "/videos/3_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 7, QuestionId = 16, Path = "/videos/4_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 8, QuestionId = 17, Path = "/videos/4_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 9, QuestionId = 18, Path = "/videos/5_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 10, QuestionId = 19, Path = "/videos/5_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 11, QuestionId = 20, Path = "/videos/Luma AI dropped a Sora competitor – Dream Machine - text-to-video generator that's open to ALL! #ai.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 12, QuestionId = 21, Path = "/videos/This is not Morgan Freeman  -  A Deepfake Singularity.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 13, QuestionId = 22, Path = "/videos/Trump Gets a Kim Jong Un Haircut – Putin Can’t Stop Laughing! 🤣💈.mp4", FileType = FileType.Video, Name = "A_1.mp4" },
-             new Resource { Id = 14, QuestionId = 23, Path = "/videos/Viral AI Video Trump & Harris Romance Ahead of U.S. Election.mp4", FileType = FileType.Video, Name = "A_1.mp4" }
+             new Resource { Id = 1, QuestionId = 10, Path = "/videos/1_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" ,  IsCorrect=false },
+             new Resource { Id = 2, QuestionId = 11, Path = "/videos/1_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4", IsCorrect = true },
+             new Resource { Id = 3, QuestionId = 12, Path = "/videos/2_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4", IsCorrect = false },
+             new Resource { Id = 4, QuestionId = 13, Path = "/videos/2_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = true },
+             new Resource { Id = 5, QuestionId = 14, Path = "/videos/3_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false },
+             new Resource { Id = 6, QuestionId = 15, Path = "/videos/3_Real.mov", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = true },
+             new Resource { Id = 7, QuestionId = 16, Path = "/videos/4_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false },
+             new Resource { Id = 8, QuestionId = 17, Path = "/videos/4_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = true },
+             new Resource { Id = 9, QuestionId = 18, Path = "/videos/5_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false },
+             new Resource { Id = 10, QuestionId = 19, Path = "/videos/5_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = true },
+             new Resource { Id = 11, QuestionId = 20, Path = "/videos/Luma AI dropped a Sora competitor – Dream Machine - text-to-video generator that's open to ALL! #ai.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect=false },
+             new Resource { Id = 12, QuestionId = 21, Path = "/videos/This is not Morgan Freeman  -  A Deepfake Singularity.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false },
+             new Resource { Id = 13, QuestionId = 22, Path = "/videos/Trump Gets a Kim Jong Un Haircut – Putin Can’t Stop Laughing! 🤣💈.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false },
+             new Resource { Id = 14, QuestionId = 23, Path = "/videos/Viral AI Video Trump & Harris Romance Ahead of U.S. Election.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false }
         );
 
         modelBuilder.Entity<Answer>().HasData(

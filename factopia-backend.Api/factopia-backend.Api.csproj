@@ -21,8 +21,4 @@
     <ProjectReference Include="..\factopia-backend.BLL\factopia-backend.BLL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Resources\Videos\" />
-  </ItemGroup>
-
 </Project>

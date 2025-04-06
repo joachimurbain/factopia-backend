@@ -11,8 +11,8 @@ using factopia_backend.DAL.Database;
 namespace factopia_backend.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250406092424_SeedsVideoTikTok")]
-    partial class SeedsVideoTikTok
+    [Migration("20250406093815_FullSend")]
+    partial class FullSend
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

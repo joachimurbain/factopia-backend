@@ -75,7 +75,7 @@ public class DataContext : DbContext
              new Resource { Id = 8, QuestionId = 17, Path = "/videos/4_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = true },
              new Resource { Id = 9, QuestionId = 18, Path = "/videos/5_Fake.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false },
              new Resource { Id = 10, QuestionId = 19, Path = "/videos/5_Real.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = true },
-             new Resource { Id = 11, QuestionId = 20, Path = "/videos/LumaAI.mp4.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect=false },
+             new Resource { Id = 11, QuestionId = 20, Path = "/videos/LumaAI.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect=false },
              new Resource { Id = 12, QuestionId = 21, Path = "/videos/ThisisnotMorganFreeman.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false },
              new Resource { Id = 13, QuestionId = 22, Path = "/videos/TrumpGetsaKimJongUnHaircut.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false },
              new Resource { Id = 14, QuestionId = 23, Path = "/videos/ViralAIVideoTrump.mp4", FileType = FileType.Video, Name = "A_1.mp4" , IsCorrect = false }

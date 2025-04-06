@@ -43,7 +43,16 @@ public class DataContext : DbContext
         );
 
         modelBuilder.Entity<Resource>().HasData(
-             new Resource { Id = 1, QuestionId = 1, Path = "/videos/A_1.mp4", FileType=FileType.Image, Name="A_1.mp4" }
+             new Resource { Id = 1, QuestionId = 1, Path = "/videos/1_A.mp4", FileType=FileType.Image, Name="A_1.mp4" },
+             new Resource { Id = 2, QuestionId = 1, Path = "/videos/1_B.mp4", FileType=FileType.Image, Name="A_1.mp4" },
+             new Resource { Id = 3, QuestionId = 1, Path = "/videos/2_A.mp4", FileType=FileType.Image, Name="A_1.mp4" },
+             new Resource { Id = 4, QuestionId = 1, Path = "/videos/2_B.mp4", FileType=FileType.Image, Name="A_1.mp4" },
+             new Resource { Id = 5, QuestionId = 1, Path = "/videos/3_A.mp4", FileType=FileType.Image, Name="A_1.mp4" },
+             new Resource { Id = 6, QuestionId = 1, Path = "/videos/3_B.mp4", FileType=FileType.Image, Name="A_1.mp4" },
+             new Resource { Id = 7, QuestionId = 1, Path = "/videos/4_A.mp4", FileType=FileType.Image, Name="A_1.mp4" },
+             new Resource { Id = 8, QuestionId = 1, Path = "/videos/4_B.mp4", FileType=FileType.Image, Name="A_1.mp4" },
+             new Resource { Id = 9, QuestionId = 1, Path = "/videos/5_A.mp4", FileType=FileType.Image, Name="A_1.mp4" },
+             new Resource { Id = 10, QuestionId = 1, Path = "/videos/5_B.mp4", FileType=FileType.Image, Name="A_1.mp4" }     
         );
 
 
